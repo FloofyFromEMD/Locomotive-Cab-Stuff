@@ -1,0 +1,122 @@
+@name Floofy's Digital Air Pressure gauge 2
+@inputs BrakePipe Cyl On
+@persist E:entity [BP CL]:string BrakePipe Cyl
+@model models/anytrains/props/detail/gauge_4unit.mdl
+if(first() | dupefinished()){
+    
+    Scale = 1
+
+    
+    E = entity()    
+    E:setAlpha(0)
+    
+    holoCreate(1,E:toWorld(vec(-0.7*Scale,-0.62*Scale,0.05)),vec(0.07*Scale,0.05*Scale,0.01),E:toWorld(ang(0,0,0)),vec(255),"models/holograms/plane.mdl")
+    holoParent(1,E)
+    holoMaterial(1,"models/monkcabdetailpack/speedo/speed_off")
+    
+    holoCreate(2,E:toWorld(vec(-0.7*Scale,0,0.05)),vec(0.07*Scale,0.05*Scale,0.01),E:toWorld(ang(0,0,0)),vec(255),"models/holograms/plane.mdl")
+    holoParent(2,E)
+    holoMaterial(2,"models/monkcabdetailpack/speedo/speed_off")
+    
+    holoCreate(3,E:toWorld(vec(-0.7*Scale,0.62*Scale,0.05)),vec(0.07*Scale,0.05*Scale,0.01),E:toWorld(ang(0,0,0)),vec(255),"models/holograms/plane.mdl")
+    holoParent(3,E)
+    holoMaterial(3,"models/monkcabdetailpack/speedo/speed_off")
+    
+    holoCreate(4,E:toWorld(vec(0.7*Scale,-0.62*Scale,0.05)),vec(0.07*Scale,0.05*Scale,0.01),E:toWorld(ang(0,0,0)),vec(255),"models/holograms/plane.mdl")
+    holoParent(4,E)
+    holoMaterial(4,"models/monkcabdetailpack/speedo/speed_off")
+    
+    holoCreate(5,E:toWorld(vec(0.7*Scale,0,0.05)),vec(0.07*Scale,0.05*Scale,0.01),E:toWorld(ang(0,0,0)),vec(255),"models/holograms/plane.mdl")
+    holoParent(5,E)
+    holoMaterial(5,"models/monkcabdetailpack/speedo/speed_off")
+    
+    holoCreate(6,E:toWorld(vec(0.7*Scale,0.62*Scale,0.05)),vec(0.07*Scale,0.05*Scale,0.01),E:toWorld(ang(0,0,0)),vec(255),"models/holograms/plane.mdl")
+    holoParent(6,E)
+    holoMaterial(6,"models/monkcabdetailpack/speedo/speed_off")   
+    
+    holoCreate(7,E:toWorld(vec(0)),vec(Scale),E:toWorld(ang(0,0,0)),vec(50,110,70),"models/anytrains/props/detail/gauge_4unit.mdl")
+    holoParent(7,E)
+    holoBodygroup(7,1,9)
+    holoEntity(7):setSubMaterial(3,"models/proppertextures/acrylic")
+    
+    holoCreate(8,E:toWorld(vec(-0.72*Scale,-1.3*Scale,0)),vec(0.017*Scale,0.001*Scale,0.017*Scale),E:toWorld(ang(0,-90,90)),vec(255),"models/sprops/misc/alphanum/alphanum_b.mdl")
+    holoParent(8,E)
+    holoMaterial(8,"models/monkcabdetailpack/indwaffle/ind_pcs_unlit")
+    
+    holoCreate(9,E:toWorld(vec(-0.6*Scale,-1.1*Scale,0)),vec(0.017*Scale,0.001*Scale,0.017*Scale),E:toWorld(ang(0,-90,90)),vec(255),"models/sprops/misc/alphanum/alphanum_C.mdl")
+    holoParent(9,E)
+    holoMaterial(9,"models/monkcabdetailpack/indwaffle/ind_pcs_unlit")
+    
+    holoCreate(10,E:toWorld(vec(0.6*Scale,-1.3*Scale,0)),vec(0.017*Scale,0.001*Scale,0.017*Scale),E:toWorld(ang(0,-90,90)),vec(255),"models/sprops/misc/alphanum/alphanum_b.mdl")
+    holoParent(10,E)
+    holoMaterial(10,"models/monkcabdetailpack/indwaffle/ind_unlit_1")
+    
+    holoCreate(11,E:toWorld(vec(0.72*Scale,-1.1*Scale,0)),vec(0.017*Scale,0.001*Scale,0.017*Scale),E:toWorld(ang(0,-90,90)),vec(255),"models/sprops/misc/alphanum/alphanum_P.mdl")
+    holoParent(11,E)
+    holoMaterial(11,"models/monkcabdetailpack/indwaffle/ind_unlit_1")
+    
+}
+
+
+
+BP = toString(round(BrakePipe))
+CL = toString(round(Cyl))
+
+if(On){
+    
+    holoMaterial(8,"models/monkcabdetailpack/indwaffle/ind_pcs_lit")
+    holoMaterial(9,"models/monkcabdetailpack/indwaffle/ind_pcs_lit")
+    holoMaterial(10,"models/monkcabdetailpack/indwaffle/ind_lit")
+    holoMaterial(11,"models/monkcabdetailpack/indwaffle/ind_lit")
+    
+    if(Cyl>=999){
+        holoMaterial(1,"models/monkcabdetailpack/speedo/speed_9")  
+        holoMaterial(2,"models/monkcabdetailpack/speedo/speed_9")  
+        holoMaterial(3,"models/monkcabdetailpack/speedo/speed_9")  
+    }elseif(Cyl>=100){
+        holoMaterial(1,"models/monkcabdetailpack/speedo/speed_" + CL[1])   
+        holoMaterial(2,"models/monkcabdetailpack/speedo/speed_" + CL[2])
+        holoMaterial(3,"models/monkcabdetailpack/speedo/speed_" + CL[3])
+    }elseif(Cyl>=10){
+        holoMaterial(1,"models/monkcabdetailpack/speedo/speed_off")   
+        holoMaterial(2,"models/monkcabdetailpack/speedo/speed_" + CL[1])
+        holoMaterial(3,"models/monkcabdetailpack/speedo/speed_" + CL[2])
+    }elseif(Cyl<10){
+        holoMaterial(1,"models/monkcabdetailpack/speedo/speed_off")   
+        holoMaterial(2,"models/monkcabdetailpack/speedo/speed_off")
+        holoMaterial(3,"models/monkcabdetailpack/speedo/speed_" + CL[1])
+    }  
+    
+    if(BrakePipe>=999){
+        holoMaterial(4,"models/monkcabdetailpack/speedo/speed_9")  
+        holoMaterial(5,"models/monkcabdetailpack/speedo/speed_9")  
+        holoMaterial(6,"models/monkcabdetailpack/speedo/speed_9")  
+    }elseif(BrakePipe>=100){
+        holoMaterial(4,"models/monkcabdetailpack/speedo/speed_" + BP[1])   
+        holoMaterial(5,"models/monkcabdetailpack/speedo/speed_" + BP[2])
+        holoMaterial(6,"models/monkcabdetailpack/speedo/speed_" + BP[3])
+    }elseif(BrakePipe>=10){
+        holoMaterial(4,"models/monkcabdetailpack/speedo/speed_off")   
+        holoMaterial(5,"models/monkcabdetailpack/speedo/speed_" + BP[1])
+        holoMaterial(6,"models/monkcabdetailpack/speedo/speed_" + BP[2])
+    }elseif(BrakePipe<10){
+        holoMaterial(4,"models/monkcabdetailpack/speedo/speed_off")   
+        holoMaterial(5,"models/monkcabdetailpack/speedo/speed_off")
+        holoMaterial(6,"models/monkcabdetailpack/speedo/speed_" + BP[1])
+    }  
+    
+}else{
+    holoMaterial(1,"models/monkcabdetailpack/speedo/speed_off")
+    holoMaterial(2,"models/monkcabdetailpack/speedo/speed_off")
+    holoMaterial(3,"models/monkcabdetailpack/speedo/speed_off")
+    holoMaterial(4,"models/monkcabdetailpack/speedo/speed_off")
+    holoMaterial(5,"models/monkcabdetailpack/speedo/speed_off")
+    holoMaterial(6,"models/monkcabdetailpack/speedo/speed_off")
+    
+    holoMaterial(8,"models/monkcabdetailpack/indwaffle/ind_pcs_unlit")
+    holoMaterial(9,"models/monkcabdetailpack/indwaffle/ind_pcs_unlit")
+    holoMaterial(10,"models/monkcabdetailpack/indwaffle/ind_unlit_1")
+    holoMaterial(11,"models/monkcabdetailpack/indwaffle/ind_unlit_1")
+}
+
+
