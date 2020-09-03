@@ -13,7 +13,7 @@ if(first()){
 
     RepMark = "MPI"
     RoadNo = "----"
-    LoadTime = 0 #number of seconds the computer needs to fully load.
+    LoadTime = 30 #number of seconds the computer needs to fully load.
     PTWL = RLCPT:wirelink()
     ACPower = 1
     MaxSpeed = 65
