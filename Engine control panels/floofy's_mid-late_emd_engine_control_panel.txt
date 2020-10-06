@@ -1,0 +1,342 @@
+@name Floofy's Mid-Late EMD Engine Control Panel
+@inputs Isolation Shutdown
+@outputs Isolation1 Shutdown1
+@persist ShutdownDelay Sq I Iq
+@model models/sprops/rectangles_superthin/size_2/rect_12x24.mdl
+#So be it god I swear upon my grave this shall be the last holo Dash-2 engine control panel e2 I make
+
+#Dash-2 / 1972-1992
+
+if(first()|dupefinished()){
+    
+    ShutdownDelay = 2 #Time in seconds the shutdown button has to be held before the engine shuts down
+    
+    
+    
+    
+    
+    E = entity()
+    E:setAlpha(0)
+        
+    A=0
+    holoCreate(A)
+    holoParent(A,E)
+    holoModel(A,"models/sprops/rectangles_superthin/size_2/rect_12x24.mdl")
+    holoMaterial(A,"models/proppertextures/enamel_black")
+    holoPos(A,E:toWorld(vec(0,0,0.3)))
+    holoAng(A,E:toWorld(ang(0,0,0)))
+    holoScale(A,vec(1.06,0.9,1))
+    
+    A++
+    holoCreate(A)
+    holoParent(A,E)
+    holoModel(A,"models/sprops/geometry/t_fdisc_12.mdl")
+    holoMaterial(A,"models/proppertextures/aluminum")
+    holoPos(A,E:toWorld(vec(8,-2,0.6)))
+    holoAng(A,E:toWorld(ang(0,0,90)))
+    holoScale(A,vec(0.08))
+    
+    A++
+    holoCreate(A)
+    holoParent(A,E)
+    holoModel(A,"models/sprops/geometry/t_fhex_12.mdl")
+    holoMaterial(A,"models/proppertextures/aluminum")
+    holoPos(A,E:toWorld(vec(8,-2,0.7)))
+    holoAng(A,E:toWorld(ang(0,20,90)))
+    holoScale(A,vec(0.08))
+    
+    A++
+    holoCreate(A)
+    holoParent(A,E)
+    holoModel(A,"models/sprops/geometry/t_fdisc_12.mdl")
+    holoMaterial(A,"models/proppertextures/aluminum")
+    holoPos(A,E:toWorld(vec(7,-2,0.6)))
+    holoAng(A,E:toWorld(ang(0,0,90)))
+    holoScale(A,vec(0.08))
+    
+     A++
+    holoCreate(A)
+    holoParent(A,E)
+    holoModel(A,"models/sprops/geometry/t_fhex_12.mdl")
+    holoMaterial(A,"models/proppertextures/aluminum")
+    holoPos(A,E:toWorld(vec(7,-2,0.7)))
+    holoAng(A,E:toWorld(ang(0,18,90)))
+    holoScale(A,vec(0.08))
+    
+    A++
+    holoCreate(A)
+    holoParent(A,E)
+    holoModel(A,"models/sprops/geometry/t_fdisc_12.mdl")
+    holoMaterial(A,"models/proppertextures/aluminum")
+    holoPos(A,E:toWorld(vec(6,-2,0.6)))
+    holoAng(A,E:toWorld(ang(0,0,90)))
+    holoScale(A,vec(0.08))
+    
+     A++
+    holoCreate(A)
+    holoParent(A,E)
+    holoModel(A,"models/sprops/geometry/t_fhex_12.mdl")
+    holoMaterial(A,"models/proppertextures/aluminum")
+    holoPos(A,E:toWorld(vec(6,-2,0.7)))
+    holoAng(A,E:toWorld(ang(0,10,90)))
+    holoScale(A,vec(0.08))
+    
+    A++
+    holoCreate(A)
+    holoParent(A,E)
+    holoModel(A,"models/sprops/geometry/t_fdisc_12.mdl")
+    holoMaterial(A,"models/proppertextures/aluminum")
+    holoPos(A,E:toWorld(vec(5,-2,0.6)))
+    holoAng(A,E:toWorld(ang(0,0,90)))
+    holoScale(A,vec(0.08))
+    
+    A++
+    holoCreate(A)
+    holoParent(A,E)
+    holoModel(A,"models/sprops/geometry/t_fhex_12.mdl")
+    holoMaterial(A,"models/proppertextures/aluminum")
+    holoPos(A,E:toWorld(vec(5,-2,0.7)))
+    holoAng(A,E:toWorld(ang(0,0,90)))
+    holoScale(A,vec(0.08))
+    
+    A++
+    holoCreate(A)
+    holoParent(A,E)
+    holoModel(A,"models/sprops/geometry/t_fdisc_12.mdl")
+    holoMaterial(A,"models/proppertextures/aluminum")
+    holoPos(A,E:toWorld(vec(4,-2,0.6)))
+    holoAng(A,E:toWorld(ang(0,0,90)))
+    holoScale(A,vec(0.08))
+    
+    A++
+    holoCreate(A)
+    holoParent(A,E)
+    holoModel(A,"models/sprops/geometry/t_fhex_12.mdl")
+    holoMaterial(A,"models/proppertextures/aluminum")
+    holoPos(A,E:toWorld(vec(4,-2,0.7)))
+    holoAng(A,E:toWorld(ang(0,2,90)))
+    holoScale(A,vec(0.08))
+    
+    A++
+    holoCreate(A)
+    holoParent(A,E)
+    holoModel(A,"models/sprops/geometry/t_fdisc_12.mdl")
+    holoMaterial(A,"models/proppertextures/aluminum")
+    holoPos(A,E:toWorld(vec(3,-2,0.6)))
+    holoAng(A,E:toWorld(ang(0,0,90)))
+    holoScale(A,vec(0.08))
+    
+    A++
+    holoCreate(A)
+    holoParent(A,E)
+    holoModel(A,"models/sprops/geometry/t_fhex_12.mdl")
+    holoMaterial(A,"models/proppertextures/aluminum")
+    holoPos(A,E:toWorld(vec(3,-2,0.7)))
+    holoAng(A,E:toWorld(ang(0,50,90)))
+    holoScale(A,vec(0.08))
+    
+    A++
+    holoCreate(A)
+    holoParent(A,E)
+    holoModel(A,"models/sprops/geometry/t_fdisc_12.mdl")
+    holoMaterial(A,"models/proppertextures/aluminum")
+    holoPos(A,E:toWorld(vec(2,-2,0.6)))
+    holoAng(A,E:toWorld(ang(0,0,90)))
+    holoScale(A,vec(0.08))
+    
+    A++
+    holoCreate(A)
+    holoParent(A,E)
+    holoModel(A,"models/sprops/geometry/t_fhex_12.mdl")
+    holoMaterial(A,"models/proppertextures/aluminum")
+    holoPos(A,E:toWorld(vec(2,-2,0.7)))
+    holoAng(A,E:toWorld(ang(0,10,90)))
+    holoScale(A,vec(0.08))
+    
+    A++#15
+    holoCreate(A)
+    holoParent(A,E)
+    holoModel(A,"models/sprops/misc/domes/size_2/dome_24x12.mdl")
+    holoMaterial(A,"models/proppertextures/bulb_offwhite_unlit")
+    holoPos(A,E:toWorld(vec(8,-2,0.6)))
+    holoAng(A,E:toWorld(ang(0,0,0)))
+    holoScale(A,vec(0.03,0.03,0.05))
+    
+    A++#16
+    holoCreate(A)
+    holoParent(A,E)
+    holoModel(A,"models/sprops/misc/domes/size_2/dome_24x12.mdl")
+    holoMaterial(A,"models/proppertextures/bulb_offwhite_unlit")
+    holoPos(A,E:toWorld(vec(7,-2,0.6)))
+    holoAng(A,E:toWorld(ang(0,0,0)))
+    holoScale(A,vec(0.03,0.03,0.05))
+    
+    A++#17
+    holoCreate(A)
+    holoParent(A,E)
+    holoModel(A,"models/sprops/misc/domes/size_2/dome_24x12.mdl")
+    holoMaterial(A,"models/proppertextures/bulb_offwhite_unlit")
+    holoPos(A,E:toWorld(vec(6,-2,0.6)))
+    holoAng(A,E:toWorld(ang(0,0,0)))
+    holoScale(A,vec(0.03,0.03,0.05))
+    
+    A++#18
+    holoCreate(A)
+    holoParent(A,E)
+    holoModel(A,"models/sprops/misc/domes/size_2/dome_24x12.mdl")
+    holoMaterial(A,"models/proppertextures/bulb_offwhite_unlit")
+    holoPos(A,E:toWorld(vec(5,-2,0.6)))
+    holoAng(A,E:toWorld(ang(0,0,0)))
+    holoScale(A,vec(0.03,0.03,0.05))
+
+    A++#19
+    holoCreate(A)
+    holoParent(A,E)
+    holoModel(A,"models/sprops/misc/domes/size_2/dome_24x12.mdl")
+    holoMaterial(A,"models/proppertextures/bulb_blue_unlit")
+    holoPos(A,E:toWorld(vec(4,-2,0.6)))
+    holoAng(A,E:toWorld(ang(0,0,0)))
+    holoScale(A,vec(0.03,0.03,0.05))
+    
+    A++#20
+    holoCreate(A)
+    holoParent(A,E)
+    holoModel(A,"models/sprops/misc/domes/size_2/dome_24x12.mdl")
+    holoMaterial(A,"models/proppertextures/bulb_red_unlit")
+    holoPos(A,E:toWorld(vec(3,-2,0.6)))
+    holoAng(A,E:toWorld(ang(0,0,0)))
+    holoScale(A,vec(0.03,0.03,0.05))    
+    
+    A++#21
+    holoCreate(A)
+    holoParent(A,E)
+    holoModel(A,"models/sprops/misc/domes/size_2/dome_24x12.mdl")
+    holoMaterial(A,"models/proppertextures/bulb_orange_unlit")
+    holoPos(A,E:toWorld(vec(2,-2,0.6)))
+    holoAng(A,E:toWorld(ang(0,0,0)))
+    holoScale(A,vec(0.03,0.03,0.05))    
+    
+    A++#22
+    holoCreate(A)
+    holoParent(A,E)
+    holoModel(A,"models/magtrainslocos/rotaryswitches/headlight_emd.mdl")
+    holoPos(A,E:toWorld(vec(-8,-2.5,0.2)))
+    holoAng(A,E:toWorld(ang(0,90,0)))  
+    holoBodygroup(A,2,1)
+    
+    A++#23
+    holoCreate(A)
+    holoParent(A,E)
+    holoModel(A,"models/magtrainslocos/rotaryswitches/headlight_emd.mdl")
+    holoPos(A,E:toWorld(vec(-8,2.5,0.2)))
+    holoAng(A,E:toWorld(ang(0,90,0)))  
+    holoBodygroup(A,1,2)
+    holoBodygroup(A,2,1)
+    
+    A++#24
+    holoCreate(A)
+    holoParent(A,E)
+    holoModel(A,"models/sprops/geometry/t_fdisc_12.mdl")
+    holoMaterial(A,"models/proppertextures/aluminum")
+    holoPos(A,E:toWorld(vec(0,2.5,0.6)))
+    holoAng(A,E:toWorld(ang(0,0,90)))
+    holoScale(A,vec(0.17))
+    
+    A++#25
+    holoCreate(A)
+    holoParent(A,E)
+    holoModel(A,"models/sprops/geometry/t_fhex_12.mdl")
+    holoMaterial(A,"models/proppertextures/aluminum")
+    holoPos(A,E:toWorld(vec(0,2.5,0.8)))
+    holoAng(A,E:toWorld(ang(0,18,90)))
+    holoScale(A,vec(0.16))
+    
+    A++#26
+    holoCreate(A)
+    holoParent(A,E)
+    holoModel(A,"models/holograms/plane.mdl")
+    holoPos(A,E:toWorld(vec(0,2.5,0.6)))
+    holoAng(A,E:toWorld(ang(0,0,0)))
+    holoScale(A,vec(0.3))
+    
+    A++#27
+    holoCreate(A)
+    holoParent(A,E)
+    holoModel(A,"models/holograms/plane.mdl")
+    holoPos(A,E:toWorld(vec(0,2.5,0.66)))
+    holoAng(A,E:toWorld(ang(0,0,0)))
+    holoScale(A,vec(0.26))
+    holoMaterial(A,"models/proppertextures/plastic_red")
+    
+    A++#28
+    holoCreate(A)
+    holoParent(A,E)
+    holoModel(A,"models/monkcabdetailpack/misc/pushbuttonbig.mdl")
+    holoPos(A,E:toWorld(vec(0,2.5,0.2)))
+    holoAng(A,E:toWorld(ang(0,90,0))) 
+    holoScale(A,vec(0.8)) 
+    holoEntity(A):setSubMaterial(1,"models/proppertextures/aluminum")
+    holoEntity(A):setSubMaterial(2,"models/proppertextures/plastic_red")    
+
+    I = 3
+}
+
+if(Shutdown){
+    Sq = 1
+    holoBodygroup(28,1,2)  
+    soundPlay(1,1,"monkssounds/buttons/button32_push.wav")
+    timer("shutdownseq",ShutdownDelay*1000)
+}elseif(!Shutdown & Sq){
+    Sq = 0
+    holoBodygroup(28,1,0)  
+    soundPlay(1,1,"monkssounds/buttons/button32_release.wav")
+    stoptimer("shutdownseq")
+}
+if(clk("shutdownseq")){
+    Shutdown1 = 1
+    timer("shutdownquota",500)
+}
+if(clk("shutdownquota")){
+    Shutdown1 = 0
+}
+
+
+if(I > 3){
+    I = 0
+}
+
+if(Isolation){
+    I++
+    Iq = 1
+    
+}elseif(!Isolation & Iq){
+    I++
+    Iq = 0
+}
+
+if(changed(Iq)){
+switch(I){
+    case 1,
+        holoBodygroup(23,1,0)
+        Isolation1 = 1
+        soundPlay(2,1,"gsgtrainsounds/misc/cab/reverser_neutral_2.wav")
+    break,
+    case 2,
+        holoBodygroup(23,1,3)
+        Isolation1 = 0
+        soundPlay(3,1,"trans_train_sounds/controls/aar/aar_reverser_neutral.wav")
+    break,
+    case 3,
+        holoBodygroup(23,1,2)
+        Isolation1 = 0
+        soundPlay(2,1,"gsgtrainsounds/misc/cab/reverser_neutral_2.wav")
+    break,
+    case 4,
+        holoBodygroup(23,1,7)
+        Isolation1 = 1
+        soundPlay(3,1,"trans_train_sounds/controls/aar/aar_reverser_neutral.wav")
+    break   
+}
+
+}
+
