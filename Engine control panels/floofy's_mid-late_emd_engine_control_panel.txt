@@ -6,6 +6,7 @@
 #So be it god I swear upon my grave this shall be the last holo Dash-2 engine control panel e2 I make
 
 #Dash-2 / 1972-1992
+#Do not use any toggled buttons for this e2's inputs
 
 if(first()|dupefinished()){
     
